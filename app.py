@@ -13,7 +13,7 @@ st.caption("Unsupervised Learning (K-Means + PCA) on 5,000 Popular Tracks")
 
 @st.cache_data
 def load_and_cluster():
-    df = pd.read_csv("spotify_5000.csv")
+    df = pd.read_csv("dataset.csv")
     features = ['danceability', 'energy', 'valence', 'acousticness', 'tempo', 'loudness']
     X_scaled = StandardScaler().fit_transform(df[features])
 
